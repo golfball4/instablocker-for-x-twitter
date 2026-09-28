@@ -1,3 +1,5 @@
+You can install Instablocker here: https://addons.mozilla.org/en-GB/firefox/addon/instablock-for-x-twitter/
+
 Instablock adds a block button next to the ••• menu on every post on X / Twitter. One click blocks the author straight away, with no menu to open and no "Are you sure?" dialog.
 
 It works everywhere posts appear: your home timeline, search, profiles, replies, and posts you've opened in full.

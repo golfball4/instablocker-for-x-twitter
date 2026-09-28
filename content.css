@@ -1,0 +1,82 @@
+.instablock-btn {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  color: rgb(113, 118, 123);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.instablock-btn svg {
+  width: 18.75px;
+  height: 18.75px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+.instablock-btn:hover {
+  color: rgb(244, 33, 46);
+  background-color: rgba(244, 33, 46, 0.1);
+}
+.instablock-btn:focus-visible {
+  outline: 2px solid rgb(29, 155, 240);
+  outline-offset: -2px;
+}
+.instablock-btn.ib-blocked {
+  color: rgb(244, 33, 46);
+}
+.instablock-btn.ib-blocked svg circle {
+  fill: rgba(244, 33, 46, 0.15);
+}
+.instablock-btn.ib-busy {
+  opacity: 0.45;
+  pointer-events: none;
+}
+.instablock-btn.ib-error {
+  color: rgb(255, 173, 31);
+  background-color: rgba(255, 173, 31, 0.12);
+}
+
+/* Smaller variant inside quote cards, pushed to the right edge of the header row */
+.instablock-btn.ib-quote {
+  width: 26px;
+  height: 26px;
+  margin-left: auto;
+}
+.instablock-btn.ib-quote svg {
+  width: 16px;
+  height: 16px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .instablock-btn { transition: none; }
+}
+
+/* Keep the Grok button, block button and "..." on one line */
+.ib-host {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+}
+.ib-row {
+  flex-wrap: nowrap !important;
+}
+
+/* Like X's own caret: a 34px hit area that only occupies ~18px of layout
+   height, so the header row doesn't grow and push the post body down. */
+.instablock-btn:not(.ib-quote) {
+  margin-top: -8px;
+  margin-bottom: -8px;
+}
+.instablock-btn.ib-quote {
+  margin-top: -4px;
+  margin-bottom: -4px;
+}

@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Instablock for X / Twitter",
+  "version": "1.0.3",
+  "description": "Adds a one-click block button to every post on X / Twitter, including the author of quoted posts.",
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "https://mobile.x.com/*",
+    "https://mobile.twitter.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://mobile.x.com/*",
+        "https://mobile.twitter.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "instablock-x@extension",
+      "strict_min_version": "115.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  }
+}
